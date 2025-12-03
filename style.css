@@ -1,0 +1,151 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+img {
+  height: 100%;
+  width: ;
+}
+
+html,
+body {
+ margin: 0;
+  height: 100%;
+  overflow: hidden; /* Verhindert natives Scrollen */
+}
+
+body {
+  background: #000;
+}
+
+.sidebar {
+  color: rgb(245, 246, 248);
+  font-family: "Fragment Mono", monospace;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  background-color: #000000; /* Hintergrundfarbe der Sidebar */
+  padding: 20px; /* Innenabstand */
+  height: 100vh; /* Höhe der Sidebar, volle Höhe des Ansichtsfensters */
+  grid-area: sidebar;
+  text-decoration: underline;
+  word-wrap: break-word; 
+  white-space: normal;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.sidebar ul {
+  list-style-type: none; /* Keine Aufzählungszeichen */
+  padding: 0; /* Innenabstand auf 0 setzen */
+  height: auto;
+}
+.sidebar li {
+  margin: 5px 0; /* Abstand zwischen den Listenelementen */
+  margin-bottom: 150px; 
+}
+.sidebar a {
+  color: rgb(216, 60, 60); /* Linkfarbe */
+  text-decoration: underline; 
+    width: 200px; 
+    /* Sidebar nicht schrumpft */
+    flex-shrink: 0; 
+    /* Sidebar volle Höhe */
+    height: 100%;
+    display: inline-block;
+    text-align: right;
+    transform: rotate(-90deg);
+    transform-origin: left top;
+    margin-top: 50px;
+}
+
+.swiper {
+  width: 100%;
+  height: 100vh;
+  grid-area: swiper;
+  will-change: transform;
+  perspective: 1000px;
+  
+  /* 4. Lässt den Swiper den gesamten verbleibenden Platz in der Breite einnehmen */
+    flex-grow: 1; 
+    /* 5. Wichtig für den vertikalen Swiper: Er muss die volle Höhe einnehmen *
+    /* Stellt sicher, dass der Swiper nicht über seine Grenzen hinausgeht */
+    min-width: 0;
+}
+
+
+.swiper-slide {
+  text-align: center;
+  max-width: 100%;
+  max-height: 100%; 
+  object-fit: contain;
+  height: 100%; /* WICHTIG! */
+  display: flex;
+  justify-content: center;
+
+}
+
+body {
+  background-color: #000000;
+  overflow: hidden;
+}
+
+.images__1 {
+  max-width: auto;
+  height: 100%;
+  padding-left: 400px;
+  padding-right: 80px;
+
+  display: block;
+  justify-content: center; /* horizontal */
+  align-items: center; /* vertikal */
+}
+
+.layout {
+  display: flex;
+  height: 100vh; /* wichtig: volle Höhe, damit Mitte funktioniert */
+  align-items: center; /* vertikale Mitte */
+  justify-content: center;
+}
+
+
+.seite {
+    display: grid;
+    grid-template-columns: 200px auto;
+    grid-template-areas: "sidebar swiper";
+    
+    /* 1. Definiert den Container als flexibles Element */
+    display: flex; 
+    
+    /* 2. Stellt sicher, dass die .seite die volle Viewport-Höhe einnimmt */
+    height: 100vh; 
+    
+    /* 3. Stellt sicher, dass die Elemente in die aktuelle Zeile passen */
+    width: 100%; 
+}
+
+
+.nav a {
+   color: rgb(245, 246, 248);
+  font-family: "Fragment Mono", monospace;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  background-color: #000000; /* Hintergrundfarbe der Sidebar */
+  padding: 20px; /* Innenabstand */
+  height: 100vh; /* Höhe der Sidebar, volle Höhe des Ansichtsfensters */
+  grid-area: sidebar;
+}
+
+
+
+
+
+/* Handy Format */
+@media (max-width: 900px) {
+   
+}
