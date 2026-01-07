@@ -124,11 +124,6 @@ const swiper = new Swiper(".swiper", {
     thresholdDelta: 20,
     sensitivity: 0.5,
   },
-
-   lazy: {
-    loadPrevNext: true, // Lädt auch das nächste und vorherige Bild vorab
-    loadOnTransitionStart: true, // Beginnt mit dem Laden, sobald die Animation startet
-  },
   
   // Deine restlichen Einstellungen (Navigation, Pagination etc.)
   navigation: {
