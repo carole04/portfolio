@@ -108,20 +108,35 @@ const linkMap = [
 
 // --- 2. SWIPER INITIALISIERUNG ---
 const swiper = new Swiper(".swiper", {
-  loop: false,
+  loop: true,
   //   effect: "fade",
   speed: 0, // Sofortiger Bildwechsel
-  mousewheel: false, // Manuelle Steuerung
   keyboard: {
     enabled: true,
   },
-  mousewheel: true,
+
+  hashNavigation: {
+    watchState: true,
+ },
 
   mousewheel: {
     thresholdTime: 20,
     thresholdDelta: 20,
     sensitivity: 0.5,
   },
+
+   lazy: {
+    loadPrevNext: true, // Lädt auch das nächste und vorherige Bild vorab
+    loadOnTransitionStart: true, // Beginnt mit dem Laden, sobald die Animation startet
+  },
+  
+  // Deine restlichen Einstellungen (Navigation, Pagination etc.)
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  
 });
 
 // Hole das DOM-Element des Swiper-Containers
@@ -137,7 +152,7 @@ swiperContainer.addEventListener("click", function () {
 // --- 3. INDEX-BASIERTE LOGIK ZUR LINK-MARKIERUNG (Verbessert) ---
 swiper.on("slideChange", function () {
   const navLinks = document.querySelectorAll(".sidebar ul li a");
-  const currentSlideIndex = swiper.activeIndex;
+  const currentSlideIndex = swiper.realIndex;
 
   // 1. Hole den Ziel-Link-Index aus der Mapping-Tabelle
   // Fallback auf 0, falls der Index im Array nicht existiert (sollte nicht passieren)
