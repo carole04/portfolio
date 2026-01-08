@@ -124,6 +124,12 @@ const swiper = new Swiper(".swiper", {
     thresholdDelta: 20,
     sensitivity: 0.5,
   },
+
+  lazy: {
+    loadPrevNext: true,        // Lädt Bilder davor und danach
+    loadPrevNextAmount: 2,     // Lädt 2 Bilder im Voraus (löst dein 2-Sekunden-Problem)
+    loadOnTransitionStart: true,
+  },
   
   // Deine restlichen Einstellungen (Navigation, Pagination etc.)
   navigation: {
