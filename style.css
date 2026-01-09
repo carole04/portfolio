@@ -198,3 +198,37 @@ video{
   width: auto;
 }
 
+
+
+/*handy format*/
+@media (max-height: 500px) and (orientation: landscape) {
+    
+    .seite {
+        /* Wir machen die Sidebar schmaler, damit das Bild mehr Platz hat */
+        grid-template-columns: 100px 1fr; 
+    }
+
+    .sidebar {
+        padding: 15px; /* Weniger Padding oben/unten spart Platz */
+        min-width: 100px;
+        font-size: 10px; /* Text etwas kleiner, damit mehr Zeilen draufpassen */
+    }
+
+    .header-split-text {
+        padding: 10px 15px; /* Header flacher machen */
+    }
+
+    /* Bilder im Swiper optimieren */
+    .swiper-slide img, 
+    .swiper-slide video {
+        margin-top: 0; /* Margins zurücksetzen, da Höhe knapp ist */
+        margin-left: 0;
+        height: 90vh; /* Bild fast so hoch wie der Bildschirm */
+        width: auto;
+    }
+
+    /* Swiper-Container anpassen */
+    .swiper {
+        height: 100vh;
+    }
+}
