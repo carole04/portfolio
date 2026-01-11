@@ -107,6 +107,8 @@ const swiper = new Swiper(".swiper", {
   speed: 0, // Sofortiger Bildwechsel
   keyboard: {
     enabled: true,
+    observer: true,
+    observeParents: true,
   },
 
   hashNavigation: {

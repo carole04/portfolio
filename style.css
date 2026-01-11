@@ -251,3 +251,57 @@ video{
     padding: 20px;
   }
 }
+
+@media screen and (max-width: 1024px) {
+    
+    html, body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden; /* Verhindert doppeltes Scrollen */
+        height: 100dvh;   /* Nutzt die dynamische Höhe inkl. Adressleiste */
+    }
+
+    /* Der Header bekommt das kleinere Padding */
+    .header-split-text {
+        padding: 20px;
+        flex-shrink: 0;   /* Header behält seine Größe */
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /* Dein Container für Sidebar + Swiper */
+    .seite { 
+        height: calc(100dvh - -30px); /* 100% minus geschätzte Header-Höhe */
+        display: flex; 
+        flex-direction: row;        /* Sidebar links, Swiper rechts */
+        overflow: hidden;
+    }
+
+    .sidebar {
+        flex-shrink: 0;
+        overflow-y: auto;           /* Sidebar bleibt scrollbar, falls Liste lang ist */
+        height: 100%;
+    }
+
+    .swiper {
+        flex-grow: 1;
+        height: 100%;
+        width: 100%;
+    }
+
+    .swiper-slide img, .swiper-slide video {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;        /* Das Bild wird nie abgeschnitten! */
+    }
+}
+
+/* Dein spezieller Sperrbildschirm nur für Hochformat */
+@media screen and (max-width: 1024px) and (orientation: portrait) {
+    #landscape-overlay {
+        display: flex;
+    }
+    .header-split-text, .seite {
+        display: none; /* Versteckt alles andere im Hochformat */
+    }
+}
