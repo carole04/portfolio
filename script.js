@@ -26,23 +26,21 @@ const linkMap = [
   4, // [11]: A-004/Project 4 (Start)
   4,
   4,
-  4,
-  4, // [12-15]
+  4, // [12-14]
 
-  5, // [16]: A-005/Project 5 (Start)
+  5, // [15]: A-005/Project 5 (Start)
   5,
   5,
-  5, // [17-19]
+  5, // [17-18]
 
-  6, // [20]: A-006/Project 6 (Start)
+  6, // [19]: A-006/Project 6 (Start)
   6,
   6,
   6,
   6,
-  6,
-  6, // [21-25]
+  6, // [21-24]
 
-  7, // [26]: A-007/Project 7 (Start)
+  7, // [25]: A-007/Project 7 (Start)
   7,
   7,
   7,
@@ -53,9 +51,9 @@ const linkMap = [
   7,
   7,
   7,
-  7, // [27-37]
+  7, // [27-36]
 
-  8, // [38]: A-008/Project 8 (Start) (ACHTUNG: DATA-HASH WERT IST HIER NUR A-008)
+  8, // [37]: A-008/Project 8 (Start) (ACHTUNG: DATA-HASH WERT IST HIER NUR A-008)
   8,
   8,
   8,
@@ -64,43 +62,39 @@ const linkMap = [
   8,
   8,
   8,
-  8,
-  8, // [39-49]
+  8, // [37-46]
 
-  9, // [50]: B-009/Project 9 (Start)
+  9, // [47]: B-009/Project 9 (Start)
   9,
   9,
   9,
   9,
-  9,
-  9, // [51-55] (Inklusive Video-Slide)
+  9, // [47-52] (Inklusive Video-Slide)
 
-  10, // [56]: C-010/Project 10 (Start)
+  10, // [53]: C-010/Project 10 (Start)
   10,
   10,
   10,
-  10,
-  10, // [57-61]
+  10, // [53-57]
 
-  11, // [62]: A-011/Project 11 (Start)
+  11, // [58]: A-011/Project 11 (Start)
   11,
   11,
   11,
   11,
-  11, // [63-67] (Inklusive Video-Slide)
+  11, // [58-63] (Inklusive Video-Slide)
 
-  12, // [68]: A-012/Project 12 (Start)
+  12, // [64]: A-012/Project 12 (Start)
   12,
   12,
   12,
   12,
   12,
-  12,
-  12, // [69-75]
+  12, // [69-70]
 
-  13, // [76]: A-013/About me (Start)
+  13, // [71]: A-013/About me (Start)
   13,
-  13, // [77-78] (letzte Slides)
+  13, // [71-73] (letzte Slides)
 
   // Das Array hat hier 79 Einträge, da Ihre Slides von 0 bis 78 gehen (insgesamt 79 Slides).
 ];
@@ -126,9 +120,9 @@ const swiper = new Swiper(".swiper", {
   },
 
   lazy: {
-    loadPrevNext: true,        // Lädt Bilder davor und danach
-    loadPrevNextAmount: 2,     // Lädt 2 Bilder im Voraus (löst dein 2-Sekunden-Problem)
-    loadOnTransitionStart: true,
+ loadPrevNext: true,        // Aktiviert das Vorladen
+  loadPrevNextAmount: 3,     // Erhöht auf 3 Bilder (lädt also 3 vor und 3 zurück)
+  loadOnTransitionStart: true
   },
   
   // Deine restlichen Einstellungen (Navigation, Pagination etc.)
